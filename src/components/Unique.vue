@@ -1,6 +1,7 @@
 <template>
   <div class="unique">
-    <p>Поможем сделать ваш продукт уникальным</p>
+    <p>Поможем сделать ваш продукт</p>
+    <p>уникальным</p>
     <div class="video-main">
       <button>
         <div class="play" />
