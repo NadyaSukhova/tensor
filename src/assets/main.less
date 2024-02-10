@@ -1,5 +1,5 @@
 @white-color: #fff;
-@hr-color: rgba(255,255,255,0.6);
+@hr-color: rgba(255, 255, 255, 0.6);
 @blue-color: rgba(47, 24, 147, 1);
 @dark-grey-color: rgba(34, 34, 40, 1);
 @button-color: #e93a7d;
@@ -65,6 +65,14 @@ button:hover {
   button {
     padding: 0.85vw 2.1vw;
   }
+
+  @media (max-width: 900px) {
+    font-size: 24px;
+
+    button {
+      font-size: 24px;
+    }
+  }
 }
 
 body {
@@ -111,6 +119,18 @@ body {
     min-width: 100%;
     min-height: 952px;
   }
+
+  @media (max-width: 1287px) {
+    .text {
+      font-size: 4.1vw;
+      padding: 44.3vw 28vw 0 2vw;
+    }
+
+    .description {
+      font-size: 2vw;
+      padding: 57vw 28vw 122px 2vw;
+    }
+  }
 }
 
 .gallery {
@@ -149,9 +169,44 @@ body {
       height: @medium-pic;
     }
   }
+
+  @media (max-width: 1024px) {
+    .column {
+      width: 26.5vw;
+    }
+
+    :nth-of-type(1) {
+      :nth-child(1) {
+        height: 388px;
+      }
+
+      :nth-child(2) {
+        height: 154px;
+      }
+    }
+
+    :nth-of-type(2) {
+      :nth-child(1) {
+        height: 154px;
+      }
+
+      :nth-child(2) {
+        height: 388px;
+      }
+    }
+
+    :nth-of-type(3) {
+      :nth-child(1) {
+        height: 271px;
+      }
+
+      :nth-child(2) {
+        height: 271px;
+      }
+    }
+  }
 }
 
-/* Create four equal columns that sits next to each other */
 .column {
   width: 370px;
   margin: 15px;
@@ -159,7 +214,7 @@ body {
   img {
     object-fit: cover;
     border-radius: 25px;
-    margin: 15px;
+    margin: 15px 0;
     width: 100%;
   }
 }
@@ -202,7 +257,7 @@ body {
   p:last-of-type {
     margin-bottom: 40px;
   }
-  
+
 
   .video-main {
     height: 433px;
@@ -278,6 +333,49 @@ body {
       width: 244px;
     }
   }
+
+  @media (max-width: 1010px) {
+    .video-offer {
+      .column {
+        margin: 90px 0.7vw 0 0.7vw;
+        width: 170px;
+      }
+    }
+  }
+
+  @media (max-width: 960px) {
+    .video-main {
+      width: 80%;
+    }
+
+    button {
+      margin: calc(25% + 35px) calc(40% + 35px);
+    }
+
+    .video-offer {
+      width: 80%;
+      margin-top: 90px;
+      flex-direction: column;
+      align-items: center;
+
+      .column {
+        margin: 2vw;
+
+        .video-1,
+        .video-2 {
+          height: 25vw;
+          width: 25vw;
+          background-size: 100% auto;
+          background-position: center;
+
+          .play {
+            position: absolute;
+            margin: 12vw 12vw;
+          }
+        }
+      }
+    }
+  }
 }
 
 .create {
@@ -285,7 +383,7 @@ body {
   background-repeat: no-repeat;
   background-size: auto 840px;
   background-color: @white-color;
-  background-position: top 0 left 915px;
+  background-position: top 0 right 0;
   margin-left: 115px;
   padding-bottom: 89px;
 
@@ -318,8 +416,6 @@ body {
     display: flex;
     flex-direction: row;
 
-
-
     .stack-title {
       color: @purple-color;
       font-size: 22px;
@@ -348,6 +444,58 @@ body {
       margin-bottom: 25px;
     }
 
+  }
+
+  @media (max-width: 1385px) {
+    background-position: top 0 right -11.7vw;
+  }
+
+  @media (max-width: 1250px) {
+    background-position: top 0 right -20vw;
+  }
+
+  @media (max-width: 1200px) {
+    background-position: top 0 right -25vw;
+  }
+
+  @media (max-width: 1100px) {
+    background-position: top 0 right -30vw;
+  }
+
+  @media (max-width: 1024px) {
+    background-position: top 0 right -40vw;
+  }
+
+  @media (max-width: 990px) {
+    margin-left: 5vw;
+    background-image: none;
+
+    button {
+      font-size: 24px;
+    }
+
+    .stack {
+      .column {
+        width: 35vw;
+      }
+
+      .column:nth-child(2) {
+        width: 35vw
+      }
+
+      .stack-title {
+        font-size: 36px;
+      }
+
+      .stack-desc {
+        font-size: 24px;
+      }
+
+      .stack-pic svg {
+        width: 64px;
+        height: 64px;
+      }
+    }
   }
 }
 
@@ -490,6 +638,16 @@ body {
       }
     }
   }
+
+  @media (max-width:900px) {
+    .variants {
+      flex-direction: column;
+      align-items: center;
+      .variant {
+        margin-bottom: 5vw;
+      }
+    }
+  }
 }
 
 
@@ -522,6 +680,7 @@ body {
 
     .input-box {
       width: 100%;
+
       input {
         background-color: transparent;
         color: @white-color;
@@ -531,6 +690,7 @@ body {
         outline: none !important;
       }
     }
+
     hr {
       width: 100%;
       border-color: @hr-color;
