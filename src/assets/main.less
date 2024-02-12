@@ -67,11 +67,31 @@ button:hover {
   }
 
   @media (max-width: 900px) {
-    font-size: 24px;
+    font-size: 3vw;
+
+    ul {
+      padding: 0;
+    }
 
     button {
-      font-size: 24px;
+      font-size: 4vw;
     }
+
+    li {
+      padding: 38px 3vw 32px 0;
+    }
+
+    li:nth-child(3) {
+      padding-right: 3vw;
+    }
+
+    li:nth-child(4) {
+      padding-right: 3vw;
+    }
+  }
+
+  @media (max-width: 900px) {
+    font-size: 4vw;
   }
 }
 
@@ -131,6 +151,34 @@ body {
       padding: 57vw 28vw 122px 2vw;
     }
   }
+
+  @media (max-width: 769px) {
+    .text {
+      font-size: 4vh;
+      padding: 55vh 28vw 0 2vw;
+    }
+
+    .description {
+      font-size: 2vh;
+      padding: 70vh 28vw 0 2vw;
+    }
+  }
+
+  @media (max-width: 710px) {
+    .content {
+      background-size: auto 100%;
+    }
+  }
+
+  @media (max-width: 553px) {
+    .text {
+      padding: 50vh 28vw 0 2vw;
+    }
+
+    .description {
+      padding: 70vh 28vw 0 2vw;
+    }
+  }
 }
 
 .gallery {
@@ -177,34 +225,72 @@ body {
 
     :nth-of-type(1) {
       :nth-child(1) {
-        height: 388px;
+        height: 36vh;
       }
 
       :nth-child(2) {
-        height: 154px;
+        height: 14.3vh;
       }
     }
 
     :nth-of-type(2) {
       :nth-child(1) {
-        height: 154px;
+        height: 14.3vh;
       }
 
       :nth-child(2) {
-        height: 388px;
+        height: 36vh;
       }
     }
 
     :nth-of-type(3) {
       :nth-child(1) {
-        height: 271px;
+        height: 25.1vh;
       }
 
       :nth-child(2) {
-        height: 271px;
+        height: 25.1vh;
       }
     }
   }
+
+  @media (max-width: 678px) {
+    :nth-of-type(1) {
+      :nth-child(1) {
+        height: 24vh;
+      }
+
+      :nth-child(2) {
+        height: 9.5vh;
+      }
+    }
+
+    :nth-of-type(2) {
+      :nth-child(1) {
+        height: 9.5vh;
+      }
+
+      :nth-child(2) {
+        height: 24vh;
+      }
+    }
+
+    :nth-of-type(3) {
+      :nth-child(1) {
+        height: 16.7vh;
+      }
+
+      :nth-child(2) {
+        height: 16.7vh;
+      }
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .column {
+      width: 24vw;
+    }}
+
 }
 
 .column {
@@ -230,7 +316,6 @@ body {
   button {
     width: 70px;
     height: 70px;
-    margin: 182px 350px;
   }
 
   button:hover {
@@ -266,6 +351,9 @@ body {
     background-position: center;
     background-size: 100% auto;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center
   }
 
   .video-offer {
@@ -312,11 +400,9 @@ body {
         border-radius: 5px;
         background-size: 170px auto;
         background-position: center;
-
-        .play {
-          position: absolute;
-          margin: 44px 78px;
-        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .video-1 {
@@ -343,23 +429,32 @@ body {
     }
   }
 
-  @media (max-width: 960px) {
-    .video-main {
-      width: 80%;
+  @media (max-width: 1010px) {
+    p {
+      font-size: 7vw;
     }
 
-    button {
-      margin: calc(25% + 35px) calc(40% + 35px);
+    .video-main {
+      height: 34.1vw;
+      width: 61vw;
     }
 
     .video-offer {
       width: 80%;
-      margin-top: 90px;
+      margin-top: 40px;
       flex-direction: column;
       align-items: center;
+      align-content: center;
 
       .column {
-        margin: 2vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 0 2vw 0;
+
+        p {
+          text-align: center;
+        }
 
         .video-1,
         .video-2 {
@@ -367,15 +462,13 @@ body {
           width: 25vw;
           background-size: 100% auto;
           background-position: center;
-
-          .play {
-            position: absolute;
-            margin: 12vw 12vw;
-          }
+          margin-top: 5vw;
         }
       }
     }
   }
+
+
 }
 
 .create {
@@ -470,25 +563,22 @@ body {
     margin-left: 5vw;
     background-image: none;
 
-    button {
-      font-size: 24px;
-    }
-
     .stack {
       .column {
-        width: 35vw;
+        width: 33vw;
+        margin: 0 10vw 0 0;
       }
 
       .column:nth-child(2) {
-        width: 35vw
+        width: 40vw
       }
 
       .stack-title {
-        font-size: 36px;
+        font-size: 5vw;
       }
 
       .stack-desc {
-        font-size: 24px;
+        font-size: 4vw;
       }
 
       .stack-pic svg {
@@ -497,6 +587,52 @@ body {
       }
     }
   }
+
+  @media (max-width: 768px) {
+    margin-left: 4vw;
+
+    .title {
+      font-size: 8vw;
+      width: 70vw;
+    }
+
+    .description {
+      width: 80vw;
+      font-size: 4vw;
+
+    }
+
+    button {
+      width: 80vw;
+      font-size: 4vw;
+    }
+  }
+
+  .stack {
+    .column {
+      width: 33vw;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .stack {
+      flex-direction: column;
+      justify-content: center;
+
+      .column {
+        width: 80vw;
+      }
+
+      .column:nth-child(1) {
+        margin-bottom: 6vw;
+      }
+
+      .column:nth-child(2) {
+        width: 80vw;
+      }
+    }
+  }
+
 }
 
 .tariff {
@@ -643,6 +779,7 @@ body {
     .variants {
       flex-direction: column;
       align-items: center;
+
       .variant {
         margin-bottom: 5vw;
       }
