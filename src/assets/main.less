@@ -285,11 +285,12 @@ body {
       }
     }
   }
-  
+
   @media (max-width: 1024px) {
     .column {
       width: 24vw;
-    }}
+    }
+  }
 
 }
 
@@ -787,16 +788,17 @@ body {
   }
 }
 
-
+.message {
+  display: flex;
+  justify-content: center;
 .popup {
   background-color: @dark-grey-color;
   border: @light-grey-color solid 2px;
   color: @white-color;
   border-radius: 10px;
-  width: 570px;
+  width: 41vw;
   position: fixed;
-  top: 192px;
-  margin: -170px calc(50% - 335px);
+  top: 5vh;
   padding: 56px 48px 0;
 
   .title {
@@ -841,4 +843,19 @@ body {
     font-size: 18px;
     margin-bottom: 56px;
   }
+
+  @media (max-width: 768px) {
+    .title {
+      font-size: 6vw;
+    }
+
+    .desc {
+      font-size: 2.5vw;
+    }
+
+    .fields .input-box input {
+      font-size: 3vw;
+    }
+  }
+}
 }
