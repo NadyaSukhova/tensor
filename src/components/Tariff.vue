@@ -64,7 +64,13 @@
                 <hr>
             </div>
             <button @:click="show = false, changeResult(), console.log(show)">Отправить</button>
-            <div class=""></div>
+            <div class="check">
+                <label class="agreement">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <div class="desc">Я соглашаюсь на обработку персональных данных и присоединяюсь к регламенту СБИС</div>
+            </div>
         </div>
         <div class="popup" v-if="result">
             <div class="title">Спасибо за заявку</div>

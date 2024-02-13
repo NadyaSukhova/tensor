@@ -11,6 +11,8 @@
 @checkbox-color-unchecked: rgba(171, 171, 171, 1);
 @checkbox-color-checked: rgba(37, 218, 197, 1);
 @shadow-color: rgba(0, 0, 0, 0.5);
+@check-color: rgba(209, 209, 209, 1);
+@checked-color: #FF0D6A;
 @body-backgound-url: url("../assets/images/basketball.jpg");
 @main-video-url: url("../assets/images/video.jpg");
 @video-1-url: url("../assets/images/exclusive.jpg");
@@ -591,8 +593,8 @@ body {
 
   @media (max-width: 768px) {
     .stack {
-        flex-direction: column;
-        justify-content: center;
+      flex-direction: column;
+      justify-content: center;
 
       .column {
         width: 80vw;
@@ -765,71 +767,112 @@ body {
 .message {
   display: flex;
   justify-content: center;
-.popup {
-  background-color: @dark-grey-color;
-  border: @light-grey-color solid 2px;
-  color: @white-color;
-  border-radius: 10px;
-  width: 41vw;
-  position: fixed;
-  top: 5vh;
-  padding: 56px 48px 0;
 
-  .title {
-    font-size: 42px;
-    padding-bottom: 16px;
-  }
+  .popup {
+    background-color: @dark-grey-color;
+    border: @light-grey-color solid 2px;
+    color: @white-color;
+    border-radius: 10px;
+    width: 41vw;
+    position: fixed;
+    top: 0;
+    padding: 56px 48px 0;
 
-  .desc {
-    font-size: 16px;
-    opacity: 0.5;
-    padding-bottom: 56px;
-  }
-
-  .fields {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 56px;
-
-    .input-box {
-      width: 100%;
-
-      input {
-        background-color: transparent;
-        color: @white-color;
-        border: none;
-        width: 100%;
-        font-size: 22px;
-        outline: none !important;
-      }
-    }
-
-    hr {
-      width: 100%;
-      border-color: @hr-color;
-      margin-bottom: 40px;
-    }
-  }
-
-  button {
-    width: 100%;
-    padding: 24px 0;
-    font-size: 18px;
-    margin-bottom: 56px;
-  }
-
-  @media (max-width: 768px) {
     .title {
-      font-size: 6vw;
+      font-size: 42px;
+      padding-bottom: 16px;
     }
 
     .desc {
-      font-size: 2.5vw;
+      font-size: 16px;
+      opacity: 0.5;
+      padding-bottom: 56px;
     }
 
-    .fields .input-box input {
-      font-size: 3vw;
+    .fields {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 56px;
+
+      .input-box {
+        width: 100%;
+
+        input {
+          background-color: transparent;
+          color: @white-color;
+          border: none;
+          width: 100%;
+          font-size: 22px;
+          outline: none !important;
+        }
+      }
+
+      hr {
+        width: 100%;
+        border-color: @hr-color;
+        margin-bottom: 40px;
+      }
+    }
+
+    .check {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 56px;
+
+      .agreement {
+        width: 2vw;
+        height: 2vw;
+
+        input {
+          visibility: hidden;
+        }
+
+        .checkmark {
+          cursor: pointer;
+          position: absolute;
+          left: 0;
+          width: 2vw;
+          height: 2vw;
+          border: @white-color solid 1px;
+          border-radius: 6px;
+          background-color: @check-color;
+          transition: .4s;
+        }
+      }
+
+      input:checked+.checkmark {
+        background-color: @checked-color;
+      }
+
+      .desc {
+        line-height: 20.83px;
+        width: 100%;
+        padding: 0;
+        margin-left: 2.5%;
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: 24px 0;
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 768px) {
+      .title {
+        font-size: 6vw;
+      }
+
+      .desc {
+        font-size: 2.5vw;
+      }
+
+      .fields .input-box input {
+        font-size: 3vw;
+      }
     }
   }
-}
 }
